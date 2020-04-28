@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3028578344524104667}
   - component: {fileID: 3028578344524104666}
-  - component: {fileID: 1640427517827480342}
+  - component: {fileID: 3932779658852269562}
   m_Layer: 0
   m_Name: Heart 2
   m_TagString: Projectile
@@ -26,10 +26,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3028578344524104664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.723, y: -8.92, z: -0.31465566}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5197951855131147902}
+  m_LocalPosition: {x: -48.5104, y: -8.796, z: -0.31465566}
+  m_LocalScale: {x: 4.543409, y: 4.543409, z: 4.543409}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -70,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300014, guid: 99b0e27a9eb2d3c458530c5ae614c40d, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 1fad481cbb435aa44862db74d9f4584f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -81,7 +80,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1640427517827480342
+--- !u!114 &3932779658852269562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,42 +89,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3028578344524104664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82ce4b14bac76134cb835d0a7f5d2742, type: 3}
+  m_Script: {fileID: 11500000, guid: 67886ec3aa93d4648879990b90318b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300014, guid: 99b0e27a9eb2d3c458530c5ae614c40d, type: 3}
-  projectile: {fileID: 1529509896838058849, guid: a3d8445a343981547aafa22348df8722,
-    type: 3}
-  projectileSpeed: 2
-  coolDown: 0
-  projectileMode: 1
---- !u!1 &4325730524907863101
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5197951855131147902}
-  m_Layer: 0
-  m_Name: FirePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5197951855131147902
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4325730524907863101}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6300049, y: 0.033999443, z: 0.51172715}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3028578344524104667}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  damage: 10
+  range: 100

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1223554586327458880}
   - component: {fileID: 4283918920693539995}
   - component: {fileID: 7907670149768868553}
+  - component: {fileID: 234192848831188021}
   - component: {fileID: 7130926686763230067}
-  - component: {fileID: 5681487038655497884}
   m_Layer: 11
   m_Name: BulletSprite 2
   m_TagString: Untagged
@@ -103,6 +103,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &234192848831188021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529509896838058849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d8d1fc528180149806fbdc2bbfa162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  damage: 1
+  rb: {fileID: 7907670149768868553}
+  DestroyTime: 2
 --- !u!61 &7130926686763230067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -129,19 +145,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.04, y: 0.1}
   m_EdgeRadius: 0
---- !u!114 &5681487038655497884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529509896838058849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bea4cae80fa80a8429026f7a3aadf75f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  damage: 1
-  rb: {fileID: 7907670149768868553}
-  DestroyTime: 20

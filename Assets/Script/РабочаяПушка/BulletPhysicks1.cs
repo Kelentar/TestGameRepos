@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BulletPhysicks1 : MonoBehaviour
 {
-    public float speed = 5f;
-    public int damage = 1;
+    public float speed;
+    public int damage;
     public Rigidbody2D rb;
     public float DestroyTime;
 

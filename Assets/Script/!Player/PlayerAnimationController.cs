@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
+    internal static object rb;
     Animator anim;
 
     PlayerWeaponManager pw;
