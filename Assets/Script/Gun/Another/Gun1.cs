@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Gun1 : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bullet;
@@ -29,7 +29,7 @@ public class Gun : MonoBehaviour
             {
 
                 //Shoot();
-                animator.SetBool("Attack1", true);
+                animator.SetBool("Attack2", true);
                 Instantiate(bullet, firePoint.position, transform.rotation);
                 timeShot = startTime;
 
@@ -41,7 +41,7 @@ public class Gun : MonoBehaviour
         }
         if (Input.GetButtonUp("Fire1"))
         {
-            animator.SetBool("Attack1", false);
+            animator.SetBool("Attack2", false);
         }
     } 
     //void Shoot()
