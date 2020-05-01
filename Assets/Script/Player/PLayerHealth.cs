@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PLayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
 
     public int health = 100;
@@ -14,7 +14,7 @@ public class PLayerHealth : MonoBehaviour
     {
         health -= damage;
 
-        StartCoroutine(DamageAnimation());
+        StartCoroutine(Hit());
 
         if (health <= 0)
         {
@@ -27,7 +27,7 @@ public class PLayerHealth : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    IEnumerator DamageAnimation()
+    IEnumerator Hit()
     {
         SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
 
