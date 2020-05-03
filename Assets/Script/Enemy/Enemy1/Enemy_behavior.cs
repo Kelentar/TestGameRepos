@@ -5,7 +5,10 @@ using UnityEngine;
 public class Enemy_behavior : MonoBehaviour
 {
     #region Public Variables;
+    public int health = 500;
     
+
+
     public float attackDistance;
     public float moveSpeed;
     public float timer;
@@ -95,7 +98,7 @@ public class Enemy_behavior : MonoBehaviour
     {
         timer = intTimer;
         attackMode = true;
-
+        
         anim.SetBool("Run", false);
         anim.SetBool("Attack", true);
     }
@@ -130,19 +133,21 @@ public class Enemy_behavior : MonoBehaviour
 
     public void SelectTarget()
     {
-        float distanceToLeft = Vector2.Distance(transform.position, leftLimit.position);
-        float distanceToRight = Vector2.Distance(transform.position, rightLimit.position);
+        
+            float distanceToLeft = Vector2.Distance(transform.position, leftLimit.position);
+            float distanceToRight = Vector2.Distance(transform.position, rightLimit.position);
 
-        if(distanceToLeft > distanceToRight)
-        {
-            target = leftLimit;
-        }
-        else
-        {
-            target = rightLimit;
-        }
+            if (distanceToLeft > distanceToRight)
+            {
+                target = leftLimit;
+            }
+            else
+            {
+                target = rightLimit;
+            }
 
-        Flip();
+            Flip();
+            
     }
     public void Flip()
     {
@@ -157,5 +162,29 @@ public class Enemy_behavior : MonoBehaviour
         }
 
         transform.eulerAngles = rotation;
+    }
+
+    public void TakeDamage(int damage)
+    {
+
+
+        health -= damage;
+
+        anim.SetTrigger("HitEnemy");
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        Debug.Log("Enemy die");
+        anim.SetBool("DeadEnemy", true);
+        
+        GetComponent<CircleCollider2D>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
+        this.enabled = false;
     }
 }

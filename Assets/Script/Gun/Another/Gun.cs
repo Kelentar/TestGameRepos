@@ -11,6 +11,8 @@ public class Gun : MonoBehaviour
     public float timeShot;
     public float startTime;
 
+
+
     void Start()
     {
        
@@ -27,9 +29,10 @@ public class Gun : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-
+                
                 //Shoot();
                 animator.SetBool("Attack1", true);
+                
                 Instantiate(bullet, firePoint.position, transform.rotation);
                 timeShot = startTime;
 

@@ -21,7 +21,9 @@ public class Buullet : MonoBehaviour
         difference.Normalize();
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
+
         rb.velocity = transform.right * speed;
+
         Invoke("DestroyAmmo", DestroyTime);
     }
     void Update()
@@ -31,8 +33,7 @@ public class Buullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
 
-
-        Enemy enemy = hitInfo.GetComponent<Enemy>();
+        Enemy_behavior enemy = hitInfo.GetComponent<Enemy_behavior>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);

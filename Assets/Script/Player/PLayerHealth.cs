@@ -7,50 +7,42 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public int health = 100;
+    public int currentHealth;
+    public Animator anim;
 
-    public GameObject deathEffect;
+    public HealthBar healthBar;
+
+    public void Start()
+    {
+        currentHealth = health;
+        healthBar.SetMaxHealth(health);
+    }
+
+    public void Update()
+    {
+        if(Input.GetButtonDown("Fire2"))
+        {
+            TakeDamage(20);
+        }
+    }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        currentHealth -= damage;
 
-        StartCoroutine(Hit());
-
-        if (health <= 0)
+        anim.SetTrigger("HitEffect");
+        healthBar.SetHealth(currentHealth);
+        if (currentHealth <= 0)
         {
+            anim.SetBool("Dead", true);
             Die();
         }
     }
 
-    void Die()
+    public void Die()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    IEnumerator Hit()
-    {
-        SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
-
-        for (int i = 0; i < 3; i++)
-        {
-            foreach (SpriteRenderer sr in srs)
-            {
-                Color c = sr.color;
-                c.a = 0;
-                sr.color = c;
-            }
-
-            yield return new WaitForSeconds(.1f);
-
-            foreach (SpriteRenderer sr in srs)
-            {
-                Color c = sr.color;
-                c.a = 1;
-                sr.color = c;
-            }
-
-            yield return new WaitForSeconds(.1f);
-        }
-    }
 
 }
