@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class EnemyWeapon : MonoBehaviour
 {
+    //[SerializeField] Transform spawPoint;
+    public int damage1 = 20;
+    public PlayerHealth player;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //private void Start()
+    //{
+    //    enemy = GetComponentInParent<PlayerHealth>();
+    //}
+    //void OnCollisionEnter2D(Collision2D col)
+    //{
+    //    if (col.transform.CompareTag("Player"))
+    //        enemy.TakeDamage(damage);
+
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+        {
+
+            player = hitInfo.GetComponent<PlayerHealth>();
+            if (player.transform.CompareTag("Player"))
+            {
+                player.TakeDamage(damage1);
+            }
+
+        }
+
 }

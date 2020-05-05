@@ -26,9 +26,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage1)
     {
-        currentHealth -= damage;
+        currentHealth -= damage1;
 
         anim.SetTrigger("HitEffect");
         healthBar.SetHealth(currentHealth);

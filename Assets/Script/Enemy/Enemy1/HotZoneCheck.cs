@@ -8,6 +8,9 @@ public class HotZoneCheck : MonoBehaviour
     private bool inRange;
     private Animator anim;
 
+    public bool isDead;
+    
+
     private void Awake()
     {
         enemyParent = GetComponentInParent<Enemy_behavior>();
@@ -18,8 +21,9 @@ public class HotZoneCheck : MonoBehaviour
 
     private void Update()
     {
-        if(inRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Attack"))
+        if(inRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Attack") && !isDead)
         {
+            
             enemyParent.Flip();
         }
             
@@ -45,4 +49,6 @@ public class HotZoneCheck : MonoBehaviour
             enemyParent.SelectTarget();
         }
     }
+
+   
 }

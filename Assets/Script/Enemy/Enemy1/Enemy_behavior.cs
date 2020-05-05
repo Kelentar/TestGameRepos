@@ -18,6 +18,7 @@ public class Enemy_behavior : MonoBehaviour
     [HideInInspector] public bool inRange;
     public GameObject hotZone;
     public GameObject triggerArea;
+    
     #endregion
 
     #region Private Variable
@@ -101,6 +102,7 @@ public class Enemy_behavior : MonoBehaviour
         
         anim.SetBool("Run", false);
         anim.SetBool("Attack", true);
+
     }
 
     void Cooldown()
@@ -174,6 +176,7 @@ public class Enemy_behavior : MonoBehaviour
 
         if (health <= 0)
         {
+            
             Die();
         }
     }
@@ -182,7 +185,9 @@ public class Enemy_behavior : MonoBehaviour
     {
         Debug.Log("Enemy die");
         anim.SetBool("DeadEnemy", true);
-        
+
+        hotZone.GetComponent<HotZoneCheck>().isDead = true;
+
         GetComponent<CircleCollider2D>().enabled = false;
         GetComponent<BoxCollider2D>().enabled = false;
         this.enabled = false;

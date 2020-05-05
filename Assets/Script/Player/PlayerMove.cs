@@ -36,6 +36,16 @@ public class PlayerMove : MonoBehaviour
             crouch = false;
         }
 
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1") || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
+        {
+            runSpeed = 0f;
+        }
+        else
+        {
+            runSpeed = 20f;
+        }
+
+
     }
 
     public void OnLanding()
