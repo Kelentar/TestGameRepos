@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy_behavior : MonoBehaviour
 {
     #region Public Variables;
-    public int health = 500;
-    
+    public int health;
+    public int currentHealth;
+   
 
 
     public float attackDistance;
@@ -35,12 +37,16 @@ public class Enemy_behavior : MonoBehaviour
         SelectTarget();
         intTimer = timer;
         anim = GetComponent<Animator>();
+        health = 500;
+        currentHealth = health;
+        
     }
     // Update is called once per frame
     void Update()
     {
+        
 
-        if(!attackMode)
+        if (!attackMode)
         {
             Move();
         }
@@ -60,7 +66,7 @@ public class Enemy_behavior : MonoBehaviour
             
         }
 
-
+        
     }
 
     
@@ -166,19 +172,22 @@ public class Enemy_behavior : MonoBehaviour
         transform.eulerAngles = rotation;
     }
 
+
+
     public void TakeDamage(int damage)
     {
 
 
-        health -= damage;
+        currentHealth -= damage;
 
         anim.SetTrigger("HitEnemy");
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             
             Die();
         }
+        
     }
 
     public void Die()
@@ -188,6 +197,7 @@ public class Enemy_behavior : MonoBehaviour
 
         hotZone.GetComponent<HotZoneCheck>().isDead = true;
 
+        
         GetComponent<CircleCollider2D>().enabled = false;
         GetComponent<BoxCollider2D>().enabled = false;
         this.enabled = false;
