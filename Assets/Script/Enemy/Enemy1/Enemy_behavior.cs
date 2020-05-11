@@ -37,7 +37,7 @@ public class Enemy_behavior : MonoBehaviour
         SelectTarget();
         intTimer = timer;
         anim = GetComponent<Animator>();
-        health = 500;
+        
         currentHealth = health;
         
     }
