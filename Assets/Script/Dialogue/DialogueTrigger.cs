@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    public DialogueManager dialogueManager;
 
-    public Dialogue dialogue;
-
-    public void TriggerDialogue()
+    public void OnTriggerStay2D(Collider2D NPC)
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        if (NPC.transform.CompareTag("NPC") && Input.GetButton("Fire3"))
+        {
+            Debug.Log("Dialog");
+            //.
+            dialogueManager.StartDialogue(NPC.GetComponent<Dialogue>());
+            //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        }
     }
 
 }

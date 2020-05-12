@@ -96,4 +96,4 @@ MonoBehaviour:
   bullet: {fileID: 1529509896838058849, guid: a3d8445a343981547aafa22348df8722, type: 3}
   animator: {fileID: 0}
   timeShot: 0
-  startTime: 2
+  startTime: 1.5

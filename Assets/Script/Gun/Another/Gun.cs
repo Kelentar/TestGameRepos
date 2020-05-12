@@ -27,12 +27,12 @@ public class Gun : MonoBehaviour
 
         if (timeShot <= 0)
         {
+
             if (Input.GetButtonDown("Fire1") && !animator.GetCurrentAnimatorStateInfo(0).IsName("IsJumping"))
             {
-                
+
                 //Shoot();
                 animator.SetTrigger("Attack1");
-                
                 Instantiate(bullet, firePoint.position, transform.rotation);
                 timeShot = startTime;
 
@@ -42,13 +42,5 @@ public class Gun : MonoBehaviour
         {
             timeShot -= Time.deltaTime;
         }
-        //if (Input.GetButtonUp("Fire1"))
-        //{
-        //    animator.SetBool("Attack1", false);
-        //}
     } 
-    //void Shoot()
-    //{
-        
-    //}
 }
