@@ -11,6 +11,15 @@ public class CameraController : MonoBehaviour
     private Transform player;
     private int lastX;
 
+    [SerializeField]
+    float leftlimit;
+    [SerializeField]
+    float rightlimit;
+    [SerializeField]
+    float uplimit;
+    [SerializeField]
+    float botlimit;
+
     void Start()
     {
         offset = new Vector2(Mathf.Abs(offset.x), offset.y);
@@ -51,5 +60,18 @@ public class CameraController : MonoBehaviour
             Vector3 currentPosition = Vector3.Lerp(transform.position, target, dumping * Time.deltaTime);
             transform.position = currentPosition;
         }
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, leftlimit, rightlimit),
+            Mathf.Clamp(transform.position.y, botlimit, uplimit),
+            transform.position.z);
     }
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(new Vector2(leftlimit, uplimit), new Vector2(rightlimit, uplimit));
+        Gizmos.DrawLine(new Vector2(leftlimit, botlimit), new Vector2(rightlimit, botlimit));
+        Gizmos.DrawLine(new Vector2(leftlimit, uplimit), new Vector2(leftlimit, botlimit));
+        Gizmos.DrawLine(new Vector2(rightlimit, uplimit), new Vector2(rightlimit, botlimit));
+    }
+    
 }

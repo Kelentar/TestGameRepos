@@ -32,7 +32,7 @@
 //    void Start()
 //    {
 //        rb = GetComponent<Rigidbody2D>();
-//        extraJumps = extraJumpsValue;      
+//        extraJumps = extraJumpsValue;
 //        anim = GetComponent<Animator>();
 //    }
 

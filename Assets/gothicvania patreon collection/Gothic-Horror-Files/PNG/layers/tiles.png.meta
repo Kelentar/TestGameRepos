@@ -31,6 +31,7 @@ TextureImporter:
     21300052: tiles_26
     21300054: tiles_27
     21300056: tiles_28
+    21300058: tiles_29
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -692,13 +693,33 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 65af08fce6da43c49a1ff1e6686ebabb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_29
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 0
+        width: 311
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f348b60c6ce35d44486d23df504d0bea
       vertices: []
       indices: 
       edges: []
