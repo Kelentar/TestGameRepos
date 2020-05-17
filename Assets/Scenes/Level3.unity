@@ -42846,14 +42846,12 @@ PrefabInstance:
         type: 3}
       propertyPath: firePoint
       value: 
-      objectReference: {fileID: 5051897160998205062, guid: 7bd45f09bbdcebf41807566671f02caa,
-        type: 3}
+      objectReference: {fileID: 2162611443218437687}
     - target: {fileID: 1865585462651535022, guid: 6f6daa9591a78fd4997b7fe9da25f78f,
         type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 5051897161893736350, guid: 7bd45f09bbdcebf41807566671f02caa,
-        type: 3}
+      objectReference: {fileID: 2162611442062855983}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f6daa9591a78fd4997b7fe9da25f78f, type: 3}
 --- !u!212 &2162611442062855977
@@ -43169,7 +43167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2162611443218437686}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13, y: 0.11, z: 0.1970715}
+  m_LocalPosition: {x: 0.13, y: 0.09, z: 0.1970715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2162611442062855978}
@@ -43808,14 +43806,12 @@ PrefabInstance:
         type: 3}
       propertyPath: firePoint
       value: 
-      objectReference: {fileID: 5051897160998205062, guid: 7bd45f09bbdcebf41807566671f02caa,
-        type: 3}
+      objectReference: {fileID: 2162611443218437687}
     - target: {fileID: 1111427506805123014, guid: 5069d512f23df694fa52e90ae42e2ca2,
         type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 5051897161893736350, guid: 7bd45f09bbdcebf41807566671f02caa,
-        type: 3}
+      objectReference: {fileID: 2162611442062855983}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5069d512f23df694fa52e90ae42e2ca2, type: 3}
 --- !u!1 &4314254577643839858

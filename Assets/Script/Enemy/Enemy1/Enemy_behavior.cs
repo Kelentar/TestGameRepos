@@ -182,6 +182,14 @@ public class Enemy_behavior : MonoBehaviour
 
         anim.SetTrigger("HitEnemy");
 
+        if(currentHealth <= (health / 2) )
+        {
+            moveSpeed *= 2;
+            timer /= 2;
+            anim = GetComponent<Animator>();
+            anim.speed = 1.5f;
+        }
+
         if (currentHealth <= 0)
         {
             

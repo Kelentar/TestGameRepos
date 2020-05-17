@@ -1,7 +1,12 @@
 fileFormatVersion: 2
 guid: 62a16196805af80448c5b952ed1ca626
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: breath-fire_0
+    21300002: breath-fire_1
+    21300004: breath-fire_2
+    21300006: breath-fire_4
+    21300008: breath-fire_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +45,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +74,131 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: breath-fire_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 11
+        width: 120
+        height: 70
+      alignment: 9
+      pivot: {x: 0.4916667, y: 0.5857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b828db032fd77b4aac8a64d11afe0d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breath-fire_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 11
+        width: 119
+        height: 67
+      alignment: 9
+      pivot: {x: 0.487395, y: 0.6567164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25185b1ad5545c949a2f9c99b8b340e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breath-fire_2
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 9
+        width: 118
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5084746, y: 0.6619718}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb76f2eae8ddc1640a43df5263623672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breath-fire_3
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 11
+        width: 127
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6484487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252b789889c94c145aa9539d60852344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breath-fire_4
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 45
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022441ca3a98106458b5aa3f9d5fa5c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
