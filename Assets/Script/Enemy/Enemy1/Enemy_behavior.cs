@@ -25,6 +25,7 @@ public class Enemy_behavior : MonoBehaviour
 
     #region Private Variable
     private Animator anim;
+    private Rigidbody2D rb;
     private float distance;
     public bool attackMode;
     private bool cooling;
@@ -37,7 +38,7 @@ public class Enemy_behavior : MonoBehaviour
         SelectTarget();
         intTimer = timer;
         anim = GetComponent<Animator>();
-        
+        rb = GetComponent<Rigidbody2D>();
         currentHealth = health;
         
     }
@@ -182,13 +183,6 @@ public class Enemy_behavior : MonoBehaviour
 
         anim.SetTrigger("HitEnemy");
 
-        if(currentHealth <= (health / 2) )
-        {
-            moveSpeed *= 2;
-            timer /= 2;
-            anim = GetComponent<Animator>();
-            anim.speed = 1.5f;
-        }
 
         if (currentHealth <= 0)
         {
@@ -204,8 +198,8 @@ public class Enemy_behavior : MonoBehaviour
         anim.SetBool("DeadEnemy", true);
 
         hotZone.GetComponent<HotZoneCheck>().isDead = true;
+        rb.GetComponent<Rigidbody2D>().gravityScale = 0f;
 
-        
         GetComponent<CircleCollider2D>().enabled = false;
         GetComponent<BoxCollider2D>().enabled = false;
         this.enabled = false;

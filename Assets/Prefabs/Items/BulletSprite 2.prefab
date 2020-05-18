@@ -119,7 +119,7 @@ MonoBehaviour:
   speed: 2
   damage: 100
   rb: {fileID: 7907670149768868553}
-  DestroyTime: 2
+  DestroyTime: 10
 --- !u!95 &95145613965404964
 Animator:
   serializedVersion: 3
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

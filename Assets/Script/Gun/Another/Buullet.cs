@@ -32,11 +32,15 @@ public class Buullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-
+        BossBehavior boss = hitInfo.GetComponent<BossBehavior>();
         Enemy_behavior enemy = hitInfo.GetComponent<Enemy_behavior>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+        }
+        else if (boss != null)
+        {
+            boss.TakeDamage(damage);
         }
         Destroy(gameObject);
     }
