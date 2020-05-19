@@ -11,10 +11,7 @@ public class Gun1 : MonoBehaviour
     public float timeShot;
     public float startTime;
 
-    void Start()
-    {
-       
-    }
+
     void Update()
     {
 
@@ -22,30 +19,27 @@ public class Gun1 : MonoBehaviour
         difference.Normalize();
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
-
         if (timeShot <= 0)
         {
+
             if (Input.GetButtonDown("Fire1") && !animator.GetCurrentAnimatorStateInfo(0).IsName("IsJumping"))
             {
 
-                //Shoot();
                 animator.SetTrigger("Attack2");
-                Instantiate(bullet, firePoint.position, transform.rotation);
                 timeShot = startTime;
-
             }
+
+
         }
         else
         {
             timeShot -= Time.deltaTime;
         }
-        //if (Input.GetButtonUp("Fire1"))
-        //{
-        //    animator.SetBool("Attack2", false);
-        //}
-    } 
-    //void Shoot()
-    //{
-        
-    //}
+    }
+    public void Shoot()
+    {
+        //Shoot();
+        Instantiate(bullet, firePoint.position, transform.rotation);
+
+    }
 }

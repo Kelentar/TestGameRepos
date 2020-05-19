@@ -72,7 +72,7 @@ public class Enemy_behavior : MonoBehaviour
 
     
 
-        void EnemyLogic()
+    void EnemyLogic()
     {
         distance = Vector2.Distance(transform.position, target.position);
             if(distance > attackDistance)
