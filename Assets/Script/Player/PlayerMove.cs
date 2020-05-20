@@ -6,11 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     public HeroScript controller;
     public Animator animator;
-    public Gun gun1;
-    public Gun1 gun2;
-    //public GameObject clone;
-
-    //public GameObject bullet;
+    
 
     public float runSpeed = 70f;
 
@@ -19,12 +15,6 @@ public class PlayerMove : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
-    void Start()
-    {
-        gun1 = GetComponent<Gun>();
-        gun2 = GetComponent<Gun1>();
-    }
-    // Update is called once per frame
     
     void Update()
     {
@@ -58,21 +48,11 @@ public class PlayerMove : MonoBehaviour
         {
             runSpeed = 20f;
         }
-        
 
+       
     }
 
-    public void Attack1()
-    {
-        //clone.GetComponent<Gun>().Shoot();
-        gun1.Shoot();
-    }
-    public void Attack2()
-    {
-        
-        gun2.Shoot();
-
-    }
+    
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
@@ -85,6 +65,7 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         // Move our character
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;

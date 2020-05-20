@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Gun1 : MonoBehaviour
 {
-    public Transform firePoint;
-    public GameObject bullet;
+    public Transform firePoint1;
+    public Rigidbody2D bullet1;
     public Animator animator;
 
     public float timeShot;
     public float startTime;
 
+    public float timeUpShot;
+    public float startUpTime;
 
     void Update()
     {
@@ -21,25 +23,29 @@ public class Gun1 : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         if (timeShot <= 0)
         {
-
             if (Input.GetButtonDown("Fire1") && !animator.GetCurrentAnimatorStateInfo(0).IsName("IsJumping"))
             {
 
                 animator.SetTrigger("Attack2");
                 timeShot = startTime;
-            }
 
+            }
 
         }
         else
         {
+
             timeShot -= Time.deltaTime;
         }
-    }
-    public void Shoot()
-    {
-        //Shoot();
-        Instantiate(bullet, firePoint.position, transform.rotation);
+        if (timeUpShot > startUpTime)
+        {
 
+            Rigidbody2D clone = Instantiate(bullet1, firePoint1.position, transform.rotation) as Rigidbody2D;
+            timeUpShot = 0;
+        }
+        if (timeShot >= 1)
+        {
+            timeUpShot += Time.deltaTime;
+        }
     }
 }

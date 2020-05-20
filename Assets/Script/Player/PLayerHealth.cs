@@ -10,21 +10,29 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public Animator anim;
 
+
     public HealthBar healthBar;
 
     public void Start()
     {
         currentHealth = health;
         healthBar.SetMaxHealth(health);
+        
+            
+            
+        
     }
 
     public void Update()
     {
-        if(Input.GetButtonDown("Fire2"))
+        
+        if (Input.GetButtonDown("Fire2"))
         {
             TakeDamage(20);
         }
+       
     }
+    
 
     public void TakeDamage(int damage1)
     {

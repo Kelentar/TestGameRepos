@@ -12,13 +12,13 @@ public class CameraController : MonoBehaviour
     private int lastX;
 
     [SerializeField]
-    float leftlimit;
+    public float leftlimit;
     [SerializeField]
-    float rightlimit;
+    public float rightlimit;
     [SerializeField]
-    float uplimit;
+    public float uplimit;
     [SerializeField]
-    float botlimit;
+    public float botlimit;
 
     void Start()
     {
