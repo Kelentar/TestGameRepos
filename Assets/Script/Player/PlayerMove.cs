@@ -6,15 +6,21 @@ public class PlayerMove : MonoBehaviour
 {
     public HeroScript controller;
     public Animator animator;
+    public Rigidbody2D rb;
     
 
-    public float runSpeed = 70f;
+    public float runSpeed;
 
     
 
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     
     void Update()
     {
@@ -27,6 +33,7 @@ public class PlayerMove : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
+            rb.GetComponent<Rigidbody2D>().gravityScale = 3f;
         }
 
         if (Input.GetButtonDown("Crouch"))
@@ -56,6 +63,7 @@ public class PlayerMove : MonoBehaviour
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
+        rb.GetComponent<Rigidbody2D>().gravityScale = 1f;
     }
 
     public void OnCrouching(bool isCrouching)
@@ -65,10 +73,7 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        // Move our character
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
     }
-    
 }

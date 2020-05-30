@@ -10,7 +10,7 @@ public class DialogueTrigger_5 : MonoBehaviour
     {
         if (NPC.transform.CompareTag("NPC5") && Input.GetButton("Fire3"))
         {
-            //Debug.Log("Dialog");
+            Debug.Log("Dialog");
             dialogueManager.StartDialogue(NPC.GetComponent<Dialogue>());
         }
     }
@@ -18,7 +18,7 @@ public class DialogueTrigger_5 : MonoBehaviour
     {
         if (other.transform.CompareTag("NPC5"))
         {
-
+            Debug.Log("Dialog");
             anim.SetBool("EOpen", true);
         }
     }

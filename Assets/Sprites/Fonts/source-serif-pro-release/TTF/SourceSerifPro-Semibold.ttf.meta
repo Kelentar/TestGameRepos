@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 78ff21c7e095da441b2c09f1c4a2e911
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Source Serif Pro
+  fontNames:
+  - Source Serif Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5bcfbc60810c8f5458c8183f967f2ee8, type: 3}
+  - {fileID: 12800000, guid: 43fb2351a6372a84b99530be58ca3737, type: 3}
+  - {fileID: 12800000, guid: 2394e9c25b854b640940a894f12b31af, type: 3}
+  - {fileID: 12800000, guid: 692d904312ff4384aac4ca9aec52b8d0, type: 3}
+  - {fileID: 12800000, guid: 788f1c27038ede04b9d0fa0b697664eb, type: 3}
+  - {fileID: 12800000, guid: 0361ef096445a3948bb6032752ae570f, type: 3}
+  - {fileID: 12800000, guid: 3d6ecbb987ba56d4196997a38c5c6eb8, type: 3}
+  - {fileID: 12800000, guid: 155b40aa183546e448390b7db782b72e, type: 3}
+  - {fileID: 12800000, guid: 06078b0c54f29334cb3043142fd28fd3, type: 3}
+  - {fileID: 12800000, guid: 585f872d949a6b24198add3f9b25a7fa, type: 3}
+  - {fileID: 12800000, guid: 3dd3b65fbecca74448aa2043ea39e2b8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

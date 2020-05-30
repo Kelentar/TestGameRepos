@@ -68,8 +68,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 1fad481cbb435aa44862db74d9f4584f, type: 3}
+  m_SortingOrder: 22
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -92,10 +92,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67886ec3aa93d4648879990b90318b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 7256145892735516239, guid: 6e04d21c73e76ed42bfc9cf028ea5b15,
+  firePoint: {fileID: 1427216699825778198, guid: 7bd45f09bbdcebf41807566671f02caa,
     type: 3}
-  bullet: {fileID: 1529509896838058849, guid: a3d8445a343981547aafa22348df8722, type: 3}
+  bullet: {fileID: 7907670149768868553, guid: a3d8445a343981547aafa22348df8722, type: 3}
   animator: {fileID: 1427216698607286030, guid: 7bd45f09bbdcebf41807566671f02caa,
     type: 3}
   timeShot: 0
   startTime: 2
+  timeUpShot: 0
+  startUpTime: 1
