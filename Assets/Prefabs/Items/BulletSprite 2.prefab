@@ -116,10 +116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d8d1fc528180149806fbdc2bbfa162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  damage: 100
+  speed: 4
+  damage: 150
   rb: {fileID: 7907670149768868553}
-  DestroyTime: 10
+  DestroyTime: 2
 --- !u!95 &95145613965404964
 Animator:
   serializedVersion: 3

@@ -204,7 +204,7 @@ public class BossBehavior : MonoBehaviour
         Debug.Log("Enemy die");
         anim.SetBool("DeadEnemy", true);
 
-        hotZone.GetComponent<HotZoneCheck>().isDead = true;
+        hotZone.GetComponent<BossHotZone>().isDead = true;
 
         rb.GetComponent<Rigidbody2D>().gravityScale = 0f;
 
