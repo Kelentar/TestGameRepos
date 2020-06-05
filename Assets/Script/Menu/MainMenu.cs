@@ -27,4 +27,13 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quitting");
         Application.Quit();
     }
+
+    public void setMusic(float value)
+    {
+        Global.music = value;
+    }
+    public void setSound(float value)
+    {
+        Global.sound = value;
+    }
 }

@@ -20,14 +20,13 @@ public class Enemy_behavior : MonoBehaviour
     [HideInInspector] public bool inRange;
     public GameObject hotZone;
     public GameObject triggerArea;
-    
+    public bool attackMode;
     #endregion
 
     #region Private Variable
     private Animator anim;
     private Rigidbody2D rb;
     private float distance;
-    public bool attackMode;
     private bool cooling;
     private float intTimer;
     #endregion

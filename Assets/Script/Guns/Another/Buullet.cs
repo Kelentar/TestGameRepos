@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Buullet : MonoBehaviour
 {
@@ -26,10 +24,7 @@ public class Buullet : MonoBehaviour
 
         Invoke("DestroyAmmo", DestroyTime);
     }
-    void Update()
-    {
-        
-    }
+    
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         BossBehavior boss = hitInfo.GetComponent<BossBehavior>();
